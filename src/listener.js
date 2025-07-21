@@ -3,7 +3,7 @@ Webex = require('webex');
 const http = require('http');
 const { fonts } = require('../util/fonts');
 
-const HttpsProxyAgent = require('https-proxy-agent');
+const { HttpsProxyAgent } = require('https-proxy-agent');
 
 const proxyUrl = process.env.HTTPS_PROXY || process.env.HTTP_PROXY;
 
