@@ -3,6 +3,10 @@ Webex = require('webex');
 const http = require('http');
 const { fonts } = require('../util/fonts');
 
+const HttpsProxyAgent = require('https-proxy-agent');
+
+const proxyUrl = process.env.HTTPS_PROXY || process.env.HTTP_PROXY;
+
 let webex;
 
 /**
@@ -70,11 +74,25 @@ function runListener(specs, resource) {
 }
 
 function _initializeWebex(accessToken) {
-    webex = Webex.init({
+    let webexConfig = {
         credentials: {
-            access_token: accessToken
+            access_token: accessToken,
         }
-    });
+    };
+
+    if (proxyUrl) {
+        const agent = new HttpsProxyAgent(proxyUrl);
+
+        webexConfig.config = {
+            defaultMercuryOptions: {
+                agent: agent,
+            }
+        };
+        console.log(`Configuring Webex SDK to use proxy: ${proxyUrl}`);
+
+    }
+
+    webex = Webex.init(webexConfig);
 }
 
 /**
