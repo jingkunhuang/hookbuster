@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import listener from './src/listener.js';
 import cli from './src/cli.js';
 import { fonts } from './util/fonts.js';

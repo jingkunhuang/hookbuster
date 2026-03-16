@@ -1,15 +1,38 @@
 {
   "name": "hookbuster",
-  "version": "",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "WebSocket-to-HTTP event forwarder for Webex Teams. Receive Webex events via websocket and forward them to applications behind firewalls.",
+  "main": "app.js",
+  "bin": {
+    "hookbuster": "./app.js"
+  },
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type":"module",
-  "keywords": [],
-  "author": "",
+  "type": "module",
+  "keywords": [
+    "webex",
+    "webhook",
+    "websocket",
+    "event-forwarder",
+    "bot",
+    "teams",
+    "cisco"
+  ],
+  "author": "Jingkun Huang",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jingkunhuang/hookbuster.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jingkunhuang/hookbuster/issues"
+  },
+  "homepage": "https://github.com/jingkunhuang/hookbuster#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "dependencies": {
     "asciiart-logo": "^0.2.6",
     "chalk": "^5.4.1",

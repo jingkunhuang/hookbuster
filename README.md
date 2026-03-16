@@ -22,10 +22,32 @@ This application demonstrates how to register for Webex Teams `message`, `member
 
 ## 🚀 Install and Run
 
+### Option 1: Install from GitHub (Recommended)
+
+Install directly from GitHub using npm:
+
+```bash
+# Global installation
+npm install -g git+https://github.com/jingkunhuang/hookbuster.git
+
+# Run the application
+hookbuster
+```
+
+Or use npx without installation:
+
+```bash
+npx git+https://github.com/jingkunhuang/hookbuster.git
+```
+
+For more installation options, see [INSTALL.md](INSTALL.md).
+
+### Option 2: Clone and Install
+
 **Basic Installation:**
 ```bash
 # Clone the repository
-git clone https://github.com/WebexSamples/hookbuster.git
+git clone https://github.com/jingkunhuang/hookbuster.git
 cd hookbuster
 
 # Install dependencies
@@ -35,7 +57,25 @@ npm install
 node app.js
 ```
 
-## 💻 Usage - Demonstration Mode
+## 💻 Usage
+
+For detailed usage instructions, see **[USAGE.md](USAGE.md)**.
+
+### Quick Start
+
+**Interactive Mode:**
+```bash
+hookbuster
+```
+
+**Deployment Mode:**
+```bash
+export TOKEN="your_webex_access_token"
+export PORT="5000"
+hookbuster
+```
+
+### Demonstration Mode
 
 By default the app will run in "demonstration mode" with a command line interface that solicits the access token, port, and which resources and events to register for:
 

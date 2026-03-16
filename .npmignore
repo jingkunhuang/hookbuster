@@ -1,0 +1,23 @@
+# Development files
+.omc/
+.claude/
+.git/
+.gitignore
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+test/
+*.test.js
+
+# Documentation (keep README.md)
+docs/
